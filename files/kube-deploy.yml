@@ -1,0 +1,17 @@
+---
+- name: Kubernetes utilities
+  hosts: nodes
+  become: yes
+
+  tasks:
+  - name: Swappiness configuration 0
+    lineinfile:
+      path: /etc/sysctl.conf
+      line: "vm.swappiness=0"
+
+  - name: Turn swappiness off
+    command:
+      cmd: swapoff -a
+
+
+

@@ -1,0 +1,10 @@
+[kube-cluster:children]
+master
+nodes
+
+[master]
+master01
+
+[nodes]
+node01
+node02
